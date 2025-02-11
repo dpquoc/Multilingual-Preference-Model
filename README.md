@@ -18,6 +18,7 @@ The preference model is used in **RLHF (Reinforcement Learning from Human Feedba
 
 ## 🧠 Model Architecture
 The model is based on **Cohere 2** with an added **sequence classification** head, making it adaptable for both **preference modeling and classification tasks**.
+
 **Promppt Engineering:** The input consists of a prompt + Response A + Response B, then input is passed to model classifying which response is better.
 
 ![Model Architecture](images/architecture.png)
