@@ -1,4 +1,4 @@
-# Multilingual Preference Model with Cohere 2
+# Multilingual Preference Model
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/dpquoc/Multilingual-Preference-Model)  
 [![WandB Report](https://img.shields.io/badge/Training-Report-orange?logo=weightsandbiases)](https://api.wandb.ai/links/dpquoc-openai/3c3j635r)
@@ -11,6 +11,16 @@ This project focuses on building a **multilingual preference model** based on **
 - **Fine-tuning with ORCA DPO dataset**: Improved cross-lingual preference understanding  
 - **Optimized training**: Used **LoRA adapters** to reduce computational overhead while maintaining performance  
 - **Evaluation**: Achieved **~70% accuracy** on a test set (5% subset of the training data)  
+
+## 🏗️ Model Pipeline
+The preference model is used in **RLHF (Reinforcement Learning from Human Feedback)** training. The input consists of a **prompt + Response A + Response B**, and the model classifies which response is better.
+
+![Preference Model Pipeline](images/preference_model.png)
+
+## 🧠 Model Architecture
+The model is based on **Cohere 2** with an added **sequence classification** head, making it adaptable for both **preference modeling and classification tasks**.
+
+![Model Architecture](images/architecture.png)
 
 ## 🚀 Model and Training Resources
 - **Base Model**: [dpquoc/init-cohere2-seq](https://huggingface.co/dpquoc/init-cohere2-seq)  
